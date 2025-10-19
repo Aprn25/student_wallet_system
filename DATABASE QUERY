@@ -1,0 +1,46 @@
+mysql> CREATE DATABASE student_wallet;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> USE student_wallet;
+Database changed
+
+mysql> CREATE TABLE students (
+    -> student_id INT PRIMARY KEY AUTO_INCREMENT,
+    -> name VARCHAR(50),
+    -> email VARCHAR(50) UNIQUE,
+    -> password VARCHAR(20),
+    -> balance DECIMAL(10,2) DEFAULT 0.00);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> CREATE TABLE transactions (
+    -> txn_id INT PRIMARY KEY AUTO_INCREMENT,
+    -> student_id INT,
+    -> type VARCHAR(20),
+    -> amount DECIMAL(10,2),
+    -> txn_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    -> FOREIGN KEY (student_id) REFERENCES students(student_id));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> DESC students;
++------------+---------------+------+-----+---------+----------------+
+| Field      | Type          | Null | Key | Default | Extra          |
++------------+---------------+------+-----+---------+----------------+
+| student_id | int           | NO   | PRI | NULL    | auto_increment |
+| name       | varchar(50)   | YES  |     | NULL    |                |
+| email      | varchar(50)   | YES  | UNI | NULL    |                |
+| password   | varchar(20)   | YES  |     | NULL    |                |
+| balance    | decimal(10,2) | YES  |     | 0.00    |                |
++------------+---------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)
+
+mysql> DESC transactions;
++------------+---------------+------+-----+-------------------+-------------------+
+| Field      | Type          | Null | Key | Default           | Extra             |
++------------+---------------+------+-----+-------------------+-------------------+
+| txn_id     | int           | NO   | PRI | NULL              | auto_increment    |
+| student_id | int           | YES  | MUL | NULL              |                   |
+| type       | varchar(20)   | YES  |     | NULL              |                   |
+| amount     | decimal(10,2) | YES  |     | NULL              |                   |
+| txn_time   | timestamp     | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
++------------+---------------+------+-----+-------------------+-------------------+
+5 rows in set (0.00 sec)
