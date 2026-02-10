@@ -18,14 +18,23 @@ The Student Wallet System is a Python-based application that enables students to
 ## Features
 
 👤 Student signup and login
+
 🔐 Password-based authentication
+
 💰 Check wallet balance
+
 ➕ Deposit money
+
 ➖ Withdraw money
+
 🔁 Transfer money between users
+
 📜 View transaction history with timestamps
+
 ⚙️ Change password
+
 🧾 View account details
+
 🗄️ MySQL database integration
   
 ### Installation
@@ -36,7 +45,8 @@ The Student Wallet System is a Python-based application that enables students to
 
 ## Screenshots 
 
-![image](<img width="1228" height="755" alt="image" src="https://github.com/user-attachments/assets/1891f280-70f6-4b7f-bb2c-da23534107d4" />)
+![image](<img width="1228" height="755" alt="image" src="https://github.com/user-attachments/assets/1891f280-70f6-4b7f-bb2c-da23534107d4" />
+)
 Database Schema
 
 
@@ -44,6 +54,7 @@ Database Schema
 
 ## Diagram  
 Flowchart  
-![Procrastinator alarm Flowchart drawio](<img width="1280" height="558" alt="image" src="https://github.com/user-attachments/assets/ec3e4ea9-7cca-45ad-be0a-bb37caa06482" />)
+![Procrastinator alarm Flowchart drawio](<img width="1280" height="558" alt="image" src="https://github.com/user-attachments/assets/ec3e4ea9-7cca-45ad-be0a-bb37caa06482" />
+)
 
 
